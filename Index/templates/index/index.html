@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML basics</title>
+    </head>
+    <body>
+        <h1>{{request.user}}</h1>
+        <form method="POST" class="register-form" id="register-form">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="age"><i class="zmdi zmdi-male material-icons-name"></i></label>
+                <input type="number" min="1" max="99" required name="age" id="age" step="0.01" placeholder="Your Age"/>
+            </div>
+            <!-- SystolicBP -->
+            <div class="form-group">
+                <label for="systolicbp"><i class="zmdi zmdi-trending-down material-icons-name"></i></label>
+                <input type="number" required name="systolicbp" id="systolicbp" step="0.01" placeholder="SystolicBP"/>
+            </div>
+            <!-- DiastolicBP -->
+            <div class="form-group">
+                <label for="diastolicbp"><i class="zmdi zmdi-trending-up material-icons-name"></i></label>
+                <input type="number" required name="diastolicbp" id="diastolicbp" step="0.01" placeholder="DiastolicBP"/>
+            </div>
+            <!-- HeartRate -->
+            <div class="form-group">
+                <label for="bs"><i class="zmdi zmdi-invert-colors material-icons-name"></i></label>
+                <input type="number" required name="bs" id="bs" step="0.01" placeholder="BS"/>
+            </div>
+            <!-- Age -->
+            <div class="form-group">
+                <label for="heartRate"><i class="zmdi zmdi-favorite material-icons-name"></i></label>
+                <input type="number" required name="heartRate" id="heartRate" step="0.01" placeholder="HeartRate"/>
+            </div>
+            
+            <div class="form-group form-button">
+                <input type="submit" name="signup" id="signup" class="form-submit" value="Submit"/>
+            </div>
+        </form>
+
+    </body>
+</html>
