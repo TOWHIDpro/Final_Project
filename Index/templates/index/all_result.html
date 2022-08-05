@@ -7,7 +7,20 @@
     <title>Document</title>
 </head>
 <body>
-    {{data.user}}
-    {{data.message}}
+    <h1>{{request.user}}</h1>
+    {% for dta in data %}
+    {{dta.date}}
+    <br>
+    {{dta.age}}
+    <br>
+    {{dta.systolicbp}}
+    <br>
+    {{dta.diastolicbp}}
+    <br>
+    {{dta.bs}}
+    <br>
+    {{dta.message}}
+    <hr>
+    {% endfor %}
 </body>
 </html>
